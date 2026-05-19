@@ -6,3 +6,22 @@ Getting a Grasp on the Data
 ``` r
 library(haven); library(tidyverse); library(fixest); library(modelsummary)
 ```
+
+## Converting .dta -\> .rds
+
+``` r
+saveRDS(read_dta("../data/raw/dataMain.dta"), 
+        file = "../data/processed/dataMain.rds")
+
+saveRDS(read_dta("../data/raw/dataDiscriminationExperiment.dta"), 
+        file = "../data/processed/dataDiscriminationExperiment.rds")
+
+saveRDS(read_dta("../data/raw/permutedSchoolTypes.dta"), 
+        file = "../data/processed/permutedSchoolTypes.rds")
+```
+
+``` r
+main <- read_rds("../data/processed/dataMain.rds")
+discrimination <- read_rds("../data/processed/dataDiscriminationExperiment.rds")
+permuted <- read_rds("../data/processed/permutedSchoolTypes.rds")
+```
