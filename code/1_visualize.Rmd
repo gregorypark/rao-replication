@@ -1,0 +1,10 @@
+---
+title: "Getting a Grasp on the Data"
+output: github_document
+---
+
+## Initial Packages
+```{r, message=F}
+library(haven); library(tidyverse); library(fixest); library(modelsummary)
+```
+
